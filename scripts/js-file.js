@@ -7,16 +7,15 @@ let maxHP = 100;
 let currentHP = 100;
 
 function randomiseSprite(){
-    if(currentHP === 0){
-        const randomPokemon = Math.floor((Math.random() * 151)+1);
-        pokemon.src=`./assets/pokemon/gen1/${randomPokemon}.png`;
+    const randomPokemon = Math.floor((Math.random() * 151)+1);
+    pokemon.src=`./assets/pokemon/gen1/${randomPokemon}.png`;
 
-        currentHP = maxHP;
-        healthText.textContent = `${currentHP} / ${maxHP}`;
+    currentHP = maxHP;
+    healthText.textContent = `${currentHP} / ${maxHP}`;
 
-        const newPercent = (currentHP / maxHP) * 100;
-        healthFill.style.width = newPercent + "%";
-    }
+    const newPercent = (currentHP / maxHP) * 100;
+    healthFill.style.width = newPercent + "%";
+    
 }
 
 screen.addEventListener("click", () => {
@@ -27,6 +26,8 @@ screen.addEventListener("click", () => {
 
     healthText.textContent = `${currentHP} / ${maxHP}`;
 
-    randomiseSprite();
+    if(currentHP === 0){
+        randomiseSprite();
+    }
 
 });
