@@ -3,7 +3,7 @@ const healthText = document.getElementById("health-text");
 const healthFill = document.getElementById("health-fill");
 const pokemon = document.querySelector("#pokemon-asset img");
 const pokemonName = document.getElementById("pokemon-name");
-
+const pokemonDefeated = document.getElementById("pokemon-defeated");
 
 const gen1Pokemon = [
   "Bulbasaur", "Ivysaur", "Venusaur", "Charmander", "Charmeleon",
@@ -42,9 +42,13 @@ const gen1Pokemon = [
 
 let maxHP = 100;
 let currentHP = 100;
+let pokemonDefeatedCounter = 0;
 
 function randomiseSprite(){
-    const randomPokemon = Math.floor((Math.random() * 151)+1);
+    pokemonDefeatedCounter += 1;
+    pokemonDefeated.textContent = `${pokemonDefeatedCounter} Pokemon Defeated`;
+
+    const randomPokemon = Math.floor((Math.random() * 151));
     pokemon.src=`./assets/pokemon/gen1/${randomPokemon+1}.png`;
     pokemonName.textContent = gen1Pokemon[randomPokemon];
 
@@ -53,6 +57,7 @@ function randomiseSprite(){
 
     const newPercent = (currentHP / maxHP) * 100;
     healthFill.style.width = newPercent + "%";
+
     
 }
 
