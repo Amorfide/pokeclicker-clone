@@ -46,7 +46,6 @@ let maxHP = 100;
 let currentHP = 100;
 let pokemonDefeatedCounter = 0;
 let pokecoinTotalCounter = 0;
-let captureRate = 0.7;
 
 function capture(){
     if(Math.floor(Math.random() > 0.65)){
