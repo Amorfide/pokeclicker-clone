@@ -46,6 +46,7 @@ This project focuses on:
 
 ## Screenshots
 
+![Project Screenshot](project-screenshot.png)
 
 
 
