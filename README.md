@@ -50,6 +50,8 @@ This project focuses on:
 2. Add pokemon rarities and different catch rates
 3. A store for pokéballs
 
+---
+
 ## Screenshots
 
 ![Project Screenshot](project-screenshot.png)
