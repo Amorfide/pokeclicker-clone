@@ -44,6 +44,12 @@ This project focuses on:
 
 ---
 
+## Things to improve
+
+1. My Flexbox knowledge
+2. Add pokemon rarities and different catch rates
+3. A store for pokéballs
+
 ## Screenshots
 
 ![Project Screenshot](project-screenshot.png)
